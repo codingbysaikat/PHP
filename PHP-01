@@ -1,0 +1,27 @@
+
+<?php
+$name=$_REQUEST['Username'];
+$sub=$_REQUEST['pasword'];
+$mail=$_REQUEST['Email'];
+$dbname="saikat";
+$dbmail="saikatm3121@gmail.com";
+if($dbname==$name && $dbmail==$mail){
+    echo"your name is $name <br> your mail is $mail";
+
+}
+else{
+    echo document();
+
+}
+function document(){
+    echo $name=$_REQUEST['Username'];
+echo"<br>";
+echo $sub=$_REQUEST['pasword'];
+echo"<br>";
+echo $mail=$_REQUEST['Email'];
+
+
+}
+
+
+?>
