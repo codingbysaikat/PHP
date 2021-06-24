@@ -1,0 +1,65 @@
+<?php
+/*if(isset($_POST["submit"])){
+    $username=$_POST["Username"];
+    $Email=$_POST["Email"];
+    $password=$_POST["pasword"];
+  
+        
+
+    $connection= mysqli_connect('localhost','root','','user_info');
+    if($connection){
+        echo "connect ";
+    }
+    else{
+        echo "not conncet ";
+    }
+
+
+    //INSERT INTO `user-information`( `username`, `email`, `password`,) VALUES ('[value-1]','[value-2]','[value-3]','[value-4]','[value-5]')
+
+    $query="INSERT INTO user_information( username, email, password ) VALUES('$username','$Email','$password')";
+    
+    if($query){
+        echo "connect ";
+       
+    }
+    else{
+        echo "not conncet";
+    }
+    $result=mysqli_query($connection,$query);
+    if($result){
+        echo "insert success";
+    }
+    else{
+        echo"insert fild";
+    }
+     
+
+}*/
+//show part(mysql database)
+$connection= mysqli_connect('localhost','root','','user_info');
+    if($connection){
+        echo "connect ";
+    }
+    else{
+        echo "not conncet ";
+    }
+    
+$query2="SELECT * FROM user_information";
+$add=mysqli_query($connection,$query2);
+$count=mysqli_num_rows($add);
+if ($count>0) {
+    while ($row=mysqli_fetch_assoc($add)){
+    echo "<pre>";
+    $dbtable=$row['username'];
+    echo "$dbtable";
+     echo "</pre>";
+}
+
+    
+}
+else{
+    echo "you don't have any document into your datadase.thanks";
+}
+
+?>
