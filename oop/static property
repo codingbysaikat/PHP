@@ -1,0 +1,23 @@
+<?php
+// how declare a static property and a static method and acceess it
+class testtow{
+    public $fathername;
+    public $mothername;
+    public static $fatherfullname='sujit mondal';
+    public function __construct($faname,$mname){
+        $this->fathername=$faname;
+        $this->mothername=$mname;
+
+    }
+    public function displytwo(){
+    echo'<br>';
+    echo "Full name is ".self::$fatherfullname;
+  }
+}
+$fdateaccess= new testtow('sujit','mondal');
+echo $fdateaccess->displytwo();
+
+
+
+
+?>
