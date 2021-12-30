@@ -1,0 +1,23 @@
+<?php
+
+// how to declare a const value and access it
+class test{
+  public  $fname;
+  public  $lname;
+  const FULLNME= 'Saikat Mondal';
+  public function __construct($fname,$lname){
+    $this->fname=$fname;
+    $this->lname=$lname;
+
+  }
+  public function disply(){
+    echo "this name is ".test::FULLNME;
+    
+  }
+
+
+}
+$accessdata= new test('saikat','mondal');
+
+echo $accessdata->disply();
+?>
