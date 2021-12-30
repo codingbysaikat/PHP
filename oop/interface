@@ -1,0 +1,89 @@
+<?php 
+include "inc/header.php"; 
+
+//interface
+
+  interface School{
+    public function mySchool();
+  }
+
+   interface College{
+    public function myCollege();
+  }
+
+   interface Varsity{
+    public function myVarsity();
+  }
+
+
+ class Teacher implements School, College, Varsity{
+
+    public function __construct(){
+      $this->mySchool();
+       $this->myCollege();
+        $this->myVarsity();
+
+    }
+
+    public function mySchool(){
+      echo "I am a school teacher.<br/>";
+    }
+
+    public function myCollege(){
+      echo "I am a College teacher.<br/>";
+    }
+
+    public function myVarsity(){
+      echo "I am a Varsity teacher.<br/>";
+    }
+ }
+
+
+
+
+ class Student implements School, College, Varsity{
+
+    public function __construct(){
+      $this->mySchool();
+       $this->myCollege();
+        $this->myVarsity();
+
+    }
+
+    public function mySchool(){
+      echo "I am a school Student.<br/>";
+    }
+
+    public function myCollege(){
+      echo "I am a College Student.<br/>";
+    }
+
+    public function myVarsity(){
+      echo "I am a Varsity Student.<br/>";
+    }
+ }
+
+$teacher = new Teacher();
+$student = new Student();
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ include "inc/footer.php"; 
+
+ ?>
